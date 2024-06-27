@@ -1,5 +1,7 @@
 
 
+
+
 body {
     background-color: #0d1117;
     color: wheat;
@@ -9,6 +11,7 @@ body {
 .temp {
     border: gray dashed 3px;
 }
+
 
 header article {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -21,7 +24,14 @@ header {
     height: 23vh;
     padding: 1vh;
     display: flex;
+    border-radius: 2rem;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition:all 1s;
+}
+
+header:hover {
+    background-image: linear-gradient(to right,rgba(245, 222, 179,0), rgb(245, 222, 179),rgba(245, 222, 179,0));
+    color: #0d1117;
 }
