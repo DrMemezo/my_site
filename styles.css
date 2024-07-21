@@ -1,37 +1,38 @@
-
-
-
+@import url('https://fonts.cdnfonts.com/css/retro');
+                
+:root {
+    --orangePrimary: #FF6E00;
+    --orangeSecondary: #FF8B33;
+}
 
 body {
     background-color: #0d1117;
-    color: wheat;
+    color: var(--orangePrimary);
     display:block;
+    font-family: 'Retro', sans-serif;
 }
 
-.temp {
-    border: gray dashed 3px;
+.bordered {
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 15px;
 }
 
-
-header article {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 3rem;
-}
-header p {
-    font-size: 1.5rem;
-}
-header {
-    height: 23vh;
-    padding: 1vh;
-    display: flex;
-    border-radius: 2rem;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition:all 1s;
+.primary {
+    border: 2px solid var(--orangePrimary);
 }
 
-header:hover {
-    background-image: linear-gradient(to right,rgba(245, 222, 179,0), rgb(245, 222, 179),rgba(245, 222, 179,0));
-    color: #0d1117;
+.secondary {
+    border: 2px solid var(--orangeSecondary);
+}
+
+#headline {
+    text-decoration: overline underline;
+    font-family: 'Retro', 'Courier New', Courier, monospace;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+#tagline {
+
 }
