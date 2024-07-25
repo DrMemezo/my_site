@@ -1,5 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/retro');
-                
+
 :root {
     --orangePrimary: #FF6E00;
     --orangeSecondary: #FF8B33;
@@ -9,26 +8,27 @@ body {
     background-color: #0d1117;
     color: var(--orangePrimary);
     display:block;
-    font-family: 'Retro', sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 .bordered {
     text-align: center;
     padding: 1em;
     margin-bottom: 15px;
+    border: 2px solid var(--borderColor)
 }
 
 .primary {
-    border: 2px solid var(--orangePrimary);
+    --borderColor: var(--orangePrimary);
 }
 
 .secondary {
-    border: 2px solid var(--orangeSecondary);
+    --borderColor: var(--orangeSecondary);
 }
 
 #headline {
     text-decoration: overline underline;
-    font-family: 'Retro', 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;                                            
     font-size: 2em;
     font-weight: 700;
 }
