@@ -12,10 +12,12 @@ body {
 }
 
 .bordered {
-    text-align: center;
-    padding: 1em;
+    padding: 1.5vh;
     margin-bottom: 15px;
     border: 2px solid var(--borderColor)
+}
+.bordered h2:first-of-type {
+    margin-top: 0;
 }
 
 .primary {
@@ -26,13 +28,42 @@ body {
     --borderColor: var(--orangeSecondary);
 }
 
-#headline {
-    text-decoration: overline underline;
+.codetext {
+    text-decoration: underline;
     font-family: 'Courier New', Courier, monospace;                                            
-    font-size: 2em;
-    font-weight: 700;
 }
 
-#tagline {
+#welcomeHeader {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    margin: 15px auto;
+    font-size: 3vw;
+    z-index: 1;
+    position: relative;
+}
 
+#welcomeHeader::before {
+    content: "";
+    background-image: linear-gradient(black,
+    var(--orangePrimary));
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 0.35s linear;
+    transition:  0.35s linear;
+}
+
+#welcomeHeader:hover::before {
+    opacity: 1;
+    color:#0d1117;
+}
+
+#welcomeHeader > article {
+    font-size: 2em;
+    font-weight: 700;
 }
