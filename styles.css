@@ -28,17 +28,47 @@ body {
     --borderColor: var(--orangeSecondary);
 }
 
-.codetext {
-    text-decoration: underline;
-    font-family: 'Courier New', Courier, monospace;                                            
+.flex {
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+    flex-wrap: wrap;
 }
 
+.f_row {
+    flex-direction: row;
+}
+
+.f_column {
+    flex-direction: column;
+}
+
+.codetext {
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+    width: fit-content;                                            
+}
+.subheader {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 1vw;
+    align-items: baseline;
+    flex-wrap: nowrap;
+}
+
+.toggle {
+    background-color: var(--orangeSecondary);
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    
+}
 #welcomeHeader {
     display: flex;
     width: fit-content;
     justify-content: center;
     margin: 15px auto;
-    font-size: 3vw;
+    font-size: min(3vw, 25px);
     z-index: 1;
     position: relative;
 }
