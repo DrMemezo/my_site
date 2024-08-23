@@ -11,9 +11,20 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
+.grid-main {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1.5fr 3fr;
+    margin-bottom: 40px;
+}
+
+#ls-l {
+    grid-row-start: span 2;
+}
+
 .bordered {
     padding: 1.5vh;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     border: 2px solid var(--borderColor)
 }
 .bordered h2:first-of-type {
@@ -26,21 +37,6 @@ body {
 
 .secondary {
     --borderColor: var(--orangeSecondary);
-}
-
-.flex {
-    display: flex;
-    gap: 10px;
-    width: fit-content;
-    flex-wrap: wrap;
-}
-
-.f_row {
-    flex-direction: row;
-}
-
-.f_column {
-    flex-direction: column;
 }
 
 .codetext {
@@ -94,6 +90,6 @@ body {
 }
 
 #welcomeHeader > article {
-    font-size: 2em;
+    font-size: min(2em,5vw);
     font-weight: 700;
 }
