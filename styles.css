@@ -79,9 +79,9 @@ body {
     background-color: var(--orangeSecondary);
     border: none;
     width: fit-content;
-    height: fit-content;
-    
+    height: fit-content;   
 }
+
 #welcomeHeader {
     display: flex;
     width: fit-content;
@@ -92,27 +92,55 @@ body {
     position: relative;
 }
 
-#welcomeHeader::before {
-    content: "";
-    background-image: linear-gradient(black,
-    var(--orangePrimary));
-    opacity: 0;
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transition: opacity 0.35s linear;
-    transition:  0.35s linear;
-}
-
-#welcomeHeader:hover::before {
-    opacity: 1;
-    color:#0d1117;
-}
-
 #welcomeHeader > article {
     font-size: min(2em,5vw);
     font-weight: 700;
 }
+
+/*Projects Section*/
+
+#projects {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 5vh;
+    width: 1rem;
+    list-style-type: none;
+}
+
+#projects li {
+    border: var(--orangeSecondary) dashed 3px;
+}
+.project_images {
+    display: flex;
+}
+
+.project_image {
+    position: relative;
+}
+
+.project_images .large {
+    width: min(40vw, 250px);
+    transition: width 0.5s ease;
+}
+
+.image_text {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:red;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+
+}
+
+.project_image:hover img {
+    opacity: 0.5;
+    width: 43vw;
+}
+
+.project_image:hover .image_text {
+    opacity: 1;
+} 
